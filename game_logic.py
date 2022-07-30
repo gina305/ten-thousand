@@ -10,7 +10,7 @@ import random
 # # output from calculate_score is an integer representing the roll’s score according to rules of game.
 
 rules = [
-        ((), 0),
+        (tuple(), 0),
         ((1,), 100),
         ((1, 1), 200),
         ((1, 1, 1), 1000),
@@ -54,29 +54,36 @@ rules = [
     ]
 def random_dice():
   return random.randint(1, 6)
+recorded = []
+
+new_tuple = []
+last_rolled = []
 
 
 #Define a GameLogic class in ten_thousand/game_logic.py file.
 class GameLogic:
 
   @staticmethod
-  def calculate_score(input):
-    points = []
-    flag = False
-    results = []
-    # For each die, check the rules list.
-    for rule in rules:
-      for x[0] in input:
-        if x in rule:
-          results.append(x)
+  def calculate_score(input=(2, 2, 3, 3, 6, 6)):
+      scored_points = []
+      if input == ():
+          return 0
 
-    # if die in tuple then do the following:
-  #if input
+      input = sorted(list(input))
+      # print(straight_dice)
+      for rule in rules:
 
-  # output from calculate_score is an integer representing the roll’s score according to rules of game.
+          # Define variable for iteration
+          score = rule[1]
+          rule = list(rule[0])
+
+          #Conditionally add score
+          if input == rule:
+              scored_points.append(score)
+              #print(input, rule, score)
+      return sum(scored_points)
 
   @staticmethod
-    # Number of dice
   def roll_dice(num_dice):
     # Loop through the number of dice and generate a random number
 
