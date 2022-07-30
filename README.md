@@ -1,6 +1,8 @@
 # Ten-thousand Dice Game
 
 ## Feature Tasks and Requirements
+
+## Feature 1:
 * Create a project named ten-thousand.
 * Today is all about tackling the highest risk and/or highest priority features - scoring and dice rolling. 
   * Define a GameLogic class in ten_thousand/game_logic.py file.
@@ -13,3 +15,6 @@
   * The input to roll_dice is an integer between 1 and 6.
   * The output of roll_dice is a tuple with random values between 1 and 6.
   * The length of tuple must match the argument given to roll_dice method.
+
+### Feature 5:
+Using a Linked List as the underlying data storage mechanism, implement both a Stack and a Queue
