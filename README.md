@@ -16,5 +16,5 @@
   * The output of roll_dice is a tuple with random values between 1 and 6.
   * The length of tuple must match the argument given to roll_dice method.
 
-### Feature 5:
-Using a Linked List as the underlying data storage mechanism, implement both a Stack and a Queue
+### Feature 2:
+Extend Ten Thousand game started in previous class to get the game in playable state.
